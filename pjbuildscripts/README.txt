@@ -19,7 +19,10 @@ Run in this order:
 	Creates an SDK overlay zip file from the previously created zips to be used by developers of all platforms
 	Just unzip this file in $QNX_TARGET. NB: These files are already copied on the PJSIP build machine by the buildpjip bash script
 
-	./generic-configure-bb10
-	Used by ./buildpjsip to build opencore AMR libraries
-	NB: Can be used for any gnu autotools compliant project
-	
+
+Generic configure script:
+
+./generic-configure-bb10
+Used by ./buildpjsip to build opencore AMR libraries
+NB: Can be used for any gnu autotools compliant project
+
