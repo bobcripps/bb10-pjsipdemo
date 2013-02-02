@@ -18,7 +18,7 @@ fi
 find . -name "interf_*" | xargs -i cp -v {} $QNX_TARGET/usr/include/opencore-amrnb
 popd
 pushd trunk
-./configure-bb10 --disable-speex-aec --with-opencore-amrnb
+./configure-bb10 --disable-speex-aec --with-opencore-amr="$QNX_TARGET/armle-v7/lib"
 make dep
 make
 find . -name *.h | xargs zip pjincludes
@@ -36,7 +36,7 @@ find . -name libopencore-amrnb.a | xargs -i cp -v {} $QNX_TARGET/x86/lib
 popd
 pushd trunk
 make realclean
-./configure-bb10 --simulator --disable-speex-aec --with-opencore-amrnb
+./configure-bb10 --simulator --disable-speex-aec --with-opencore-amr="$QNX_TARGET/x86/lib"
 make dep
 make
 cp -vf `find . -name *.a`  $QNX_TARGET/x86/lib
