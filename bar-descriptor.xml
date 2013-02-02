@@ -64,11 +64,7 @@
     
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.games</category>
-    <configuration id="com.qnx.qcc.toolChain.980778485" name="Default">
-       <platformArchitecture>armle-v7</platformArchitecture>
-       <asset path="arm/o.le-v7-g/pjsipdemo" entry="true" type="Qnx/Elf">pjsipdemo</asset>
-    </configuration>
-    <configuration id="com.qnx.qcc.toolChain.1958450797" name="Device-Debug">
+    <configuration name="Device-Debug">
        <platformArchitecture>armle-v7</platformArchitecture>
        <asset path="arm/o.le-v7-g/pjsipdemo" entry="true" type="Qnx/Elf">pjsipdemo</asset>
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsua-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsua-arm-unknown-nto-qnx8.0.0eabi.a</asset>            
@@ -92,9 +88,10 @@
        <asset path="${QNX_TARGET}/armle-v7/lib/libpj-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpj-arm-unknown-nto-qnx8.0.0eabi.a</asset>
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsdp-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsdp-arm-unknown-nto-qnx8.0.0eabi.a</asset>
     </configuration>
-    <configuration id="com.qnx.qcc.toolChain.1585178889" name="Device-Release">
+    <configuration name="Device-Release">
+       <entryPointType>Qnx/Cascades</entryPointType>
        <platformArchitecture>armle-v7</platformArchitecture>
-       <asset path="arm/o.le-v7/pjsipdemo" entry="true" type="Qnx/Elf">pjsipdemo</asset>
+       <asset path="arm/o.le-v7/pjsipdemo.so" entry="true" type="Qnx/Elf">pjsipdemo.so</asset>
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsua-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsua-arm-unknown-nto-qnx8.0.0eabi.a</asset>            
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsip-ua-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsip-ua-arm-unknown-nto-qnx8.0.0eabi.a</asset>
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsip-simple-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsip-simple-arm-unknown-nto-qnx8.0.0eabi.a</asset>
@@ -116,7 +113,11 @@
        <asset path="${QNX_TARGET}/armle-v7/lib/libpj-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpj-arm-unknown-nto-qnx8.0.0eabi.a</asset>
        <asset path="${QNX_TARGET}/armle-v7/lib/libpjsdp-arm-unknown-nto-qnx8.0.0eabi.a" type="Qnx/Elf">lib/libpjsdp-arm-unknown-nto-qnx8.0.0eabi.a</asset>
     </configuration>
-    <configuration id="com.qnx.qcc.toolChain.545933665" name="Simulator-Debug">
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm-p/o.le-v7-g/pjsipdemo" entry="true" type="Qnx/Elf">pjsipdemo</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
        <platformArchitecture>x86</platformArchitecture>
        <asset path="x86/o-g/pjsipdemo" entry="true" type="Qnx/Elf">pjsipdemo</asset>
        <asset path="${QNX_TARGET}/x86/lib/libpjsua-i486-pc-nto-qnx8.0.0.a" type="Qnx/Elf">lib/libpjsua-i486-pc-nto-qnx8.0.0.a</asset>            
